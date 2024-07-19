@@ -1,0 +1,406 @@
+
+
+body {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+    color: rgb(247, 247, 247);
+    font-family: Kanit;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+    transition: background-color 0.5s ease;   
+}
+
+main {
+    flex-grow: 1;
+}
+
+
+
+button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0px 0px 4px 0px rgb(108, 99, 255);
+}
+
+.container {
+    width: 750px;
+    margin: 40px auto;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+header {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    gap: 16px;
+    max-width:750px ;
+}
+
+footer {
+    margin: 30px auto;
+    width: 750px;
+}
+
+.footer_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+input {
+    font-family: Inter;
+    font-size: 16px;
+    outline: none;
+    border: 1px solid rgb(108, 99, 255);
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+}
+
+header input  {
+    width: 595px;
+    height: 18px;
+    background: url(img/icons/search.svg) no-repeat scroll 97% center;
+}
+
+input:focus {
+    border: 1px solid rgb(108, 99, 255);
+    box-shadow: 0px 0px 1px 1px rgb(149, 145, 235);
+    outline: none;
+}
+
+.dd_btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+    min-width: 109px;
+    gap: 27px;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(108, 99, 255);
+    border: none;
+
+    color: rgb(247, 247, 247);
+    font-family: Kanit;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.dd_content {
+    box-sizing: border-box;
+    min-width: 98px;
+    flex-direction: column;
+    display: none;
+    border: 1px solid rgb(108, 99, 255);
+    border-radius: 5px;
+    background: rgb(247, 247, 247);
+}
+
+.dd_item {
+    box-sizing: border-box;
+    cursor: pointer;
+    min-width: 98px;
+    padding:  6px 5px;
+    color: rgb(108, 99, 255);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.dd_item:hover {
+    background: rgba(108, 99, 255, 0.2);
+}
+
+/* Скрываем радиокнопку */
+#filterList input[type="radio"] {
+    display: none;
+}
+
+/* Стилизация меток */
+#filterList label {
+    cursor: pointer;
+}
+
+
+.theme {
+    width: 42px;
+    height: 38px;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: rgb(108, 99, 255);
+    border: none;
+    outline: none;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    background: rgba(37, 37, 37, 0.7);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.modal_content {
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 185px auto;
+    width: 500px ;
+    padding: 18px 30px;
+}
+
+h2 {
+    color: rgb(37, 37, 37);
+    margin-bottom: 25px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.modalInput {
+    width: 420px;
+    background-color: inherit;
+}
+
+.wrap_btn_modal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cancel {
+    box-sizing: border-box;
+    border: 1px solid rgb(108, 99, 255);
+    border-radius: 5px;
+    padding: 10px 22px 10px 22px;
+    background-color: inherit;
+
+    color: rgb(108, 99, 255);
+    font-family: Kanit;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.apply {
+    border-radius: 5px;
+    background: rgb(108, 99, 255);
+    padding: 10px 22px 10px 22px;
+
+    color: #fff;
+    font-family: Kanit;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
+.open_Modal {
+    display: flex;
+    max-height: 50px;
+    align-items: center;
+    padding: 13px;
+    background: rgb(108, 99, 255);
+    border-radius: 50%;
+    left: 80%;
+}
+
+/* tasklist */
+
+.TL_container {
+    width: 520px ;
+    margin: 90px auto;
+    color: rgb(37, 37, 37);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.task_item {
+    display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.task_item input {
+    height: 20px;
+    margin-right: 17px;
+}
+
+.task_item input[name='custom_checkbox'] {
+    width: 20px;
+    height: 20px;
+}
+
+.task_item:last-child .divider {
+    display: none;
+}
+
+.divider {
+    display: block;
+    margin: 17px 0;
+    width: 100%;
+    border: 1px solid rgb(108, 99, 255);
+    opacity: 0.5;
+    z-index: -1  ;
+}
+
+.task_item input:checked + label {
+    color: rgba(37, 37, 37, 0.5);
+    text-decoration: line-through;
+}
+
+#checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    margin: 0;
+}
+
+.custom_checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#checkbox + .custom_checkbox::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 26px;
+    height: 26px;
+    border: 1px solid rgb(108, 99, 255);
+    border-radius: 2px;
+    margin-right: 17px;
+}
+
+#checkbox:checked + .custom_checkbox::before {
+    content: '';
+    background: url(img/icons/checkbox.svg) no-repeat center ;
+    background-color: rgb(108, 99, 255);
+}
+
+.task_item:hover .wrap_btn_TL  {
+    display: flex;
+}
+
+.wrap_btn_TL {
+    display: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.wrap_btn_TL button {
+    background: none;
+}
+
+.edit:hover svg path {
+    stroke: rgb(108, 99, 255);
+}
+
+.delete:hover svg path {
+    stroke: red;
+}
+
+.edit:hover {
+    box-shadow:none;
+}
+
+.delete:hover {
+    box-shadow:none;
+}
+
+.undo {
+    margin: 0 auto;
+    max-width: 123px;
+    padding: 10px;
+    background-color: rgb(108, 99, 255);box-sizing: border-box;
+    border: 2px solid rgb(108, 99, 255);
+    border-radius: 4px;
+
+    color: rgb(255, 255, 255);
+    font-family: Kanit;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.undo_messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.save-edit {
+    border-radius: 5px;
+    background: rgb(108, 99, 255);
+    padding: 10px 22px 10px 22px;
+    color: #fff;
+    font-family: Kanit;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.zaebalas {
+    width: 25px;
+    height: 25px;
+}
+
+.zeroContent {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+}
+
+

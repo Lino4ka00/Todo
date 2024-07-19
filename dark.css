@@ -1,0 +1,32 @@
+body {
+    background-color: #252525;
+    color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, label {
+    color: #fff;
+}
+
+.modal_content {
+    background-color: #252525;
+    border: 1px #fff solid;
+    border-radius: 16px;
+}
+
+.task_item input:checked + label {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: line-through;
+}
+
+.zeroContent {
+    color: #fff;
+}
+
+input {
+    border-color: #fff;
+    color: #fff;
+}
+
+.dd_content label {
+    color: rgb(108, 99, 255);
+}
